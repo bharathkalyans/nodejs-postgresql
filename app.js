@@ -5,8 +5,8 @@ const port = 3001;
 
 app.use(express.json());
 
-const router = require("./routes/person");
-app.use("/home", router);
+const personRouter = require("./routes/person");
+app.use("/person", personRouter);
 
 app.listen(port, () => {
   console.log(`Server started at port : ${port}!!`);
